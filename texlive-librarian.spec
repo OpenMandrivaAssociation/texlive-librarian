@@ -1,3 +1,9 @@
+# revision 19880
+# category Package
+# catalog-ctan /macros/generic/librarian
+# catalog-date 2010-06-25 08:56:08 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-librarian
 Version:	1.0
 Release:	1
@@ -52,6 +58,7 @@ documentation.
 %doc %{_texmfdistdir}/doc/generic/librarian/librarian-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/librarian/librarian-doc.tex
 %doc %{_texmfdistdir}/doc/generic/librarian/librarian.bib
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +69,5 @@ documentation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
