@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-librarian
 Version:	1.0
-Release:	3
+Release:	4
 Summary:	Tools to create bibliographies in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/librarian
