@@ -1,18 +1,12 @@
-# revision 19880
-# category Package
-# catalog-ctan /macros/generic/librarian
-# catalog-date 2010-06-25 08:56:08 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-librarian
-Version:	1.0
-Release:	12
+Version:	19880
+Release:	1
 Summary:	Tools to create bibliographies in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/librarian
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/librarian.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/librarian.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/librarian.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/librarian.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,12 +26,12 @@ style is given in a separate file and explained in the
 documentation.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,24 +46,10 @@ documentation.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 753307
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718857
-- texlive-librarian
-- texlive-librarian
-- texlive-librarian
-- texlive-librarian
-
