@@ -1,6 +1,6 @@
 Name:		texlive-librarian
 Version:	19880
-Release:	1
+Release:	2
 Summary:	Tools to create bibliographies in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/librarian
