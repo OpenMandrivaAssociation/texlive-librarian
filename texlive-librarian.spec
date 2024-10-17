@@ -3,7 +3,7 @@ Version:	19880
 Release:	2
 Summary:	Tools to create bibliographies in TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/librarian
+URL:		https://www.ctan.org/tex-archive/macros/generic/librarian
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/librarian.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/librarian.doc.r%{version}.tar.xz
